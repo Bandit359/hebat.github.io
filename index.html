@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Cerdas Group</title>
+    <style>
+        /* Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        /* Video Background */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Container Utama */
+        .container {
+            position: relative;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Logo Atas */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            animation: slideDown 1.5s ease forwards;
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        /* Section Konten */
+        .section {
+            display: flex;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 700px;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideRight 1.5s ease forwards 0.8s;
+        }
+
+        .section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        /* Konten Teks */
+        .content h1 {
+            font-size: 28px;
+            margin: 0 0 15px 0;
+            animation: fadeInUp 1.2s ease forwards 1.2s;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.5;
+            max-width: 400px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease forwards 1.5s;
+        }
+
+        /* Tombol */
+        .btn {
+            background-color: #fdd835;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: popUp 0.8s ease forwards 2s;
+        }
+
+        .btn:hover {
+            background-color: #fbc02d;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideRight {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popUp {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop class="video-bg">
+        <source src="teal_lightbulb.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+    </video>
+
+    <div class="container">
+        <!-- Logo Atas -->
+        <div class="logo">
+            <img src="m.png" alt="Logo Media Cerdas">
+            <h2>Media Cerdas Group</h2>
+        </div>
+
+        <!-- Konten Utama -->
+        <div class="section">
+            <img src="m.png" alt="Logo Media Cerdas">
+            <div class="content">
+                <h1>Media Cerdas Group</h1>
+                <p>
+                    website ini adalah website pembelajaran kamu bisa menggunakan website ini untuk belajar.
+                    Jadi kamu bisa belajar dimanapun dan kapanpun, belajar pun bisa jadi sangat menyenangkan.
+                </p>
+                <button class="btn">Selengkapnya</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
